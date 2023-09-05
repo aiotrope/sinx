@@ -1,13 +1,7 @@
 ---
-import Hello from '../components/Hello.svelte';
+import Layout from '../layouts/Layout.astro';
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>index</title>
-  </head>
-  <body>
-	<Hello client:load />
-  </body>
-</html>
+<Layout title="Main page">
+    <h1>Main page</h1>
+    <p>Welcome to the main page.</p>
+</Layout>
