@@ -1,22 +1,13 @@
 ---
-export interface Props {
-    pageTitle?: string
-}
-
-
-const { pageTitle = 'Home' } = Astro.props as Props
+import Hello from '../components/Hello.svelte';
 ---
+
 <html lang="en">
   <head>
-    <title>{pageTitle}</title>
+    <meta charset="utf-8" />
+    <title>index</title>
   </head>
   <body>
-   <h1>Rome!</h1>
-   <nav>
-    <ul>
-        <li><a href="/one">Click here!</a></li>
-        <li><a href="/two">Click here!</a></li>
-    </ul>
-   </nav>
+	<Hello client:load />
   </body>
 </html>
