@@ -1,32 +1,16 @@
 ---
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+const linkId = Astro.props.linkId || '1';
+const linkText = linkId == '1' ? 'Start' : 'Next';
+const text = Astro.props.text;
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta charset="utf-8" />
+    <title>My handy layout</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Main</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/admin">Admin</a></li>
-        </ul>
-      </nav>
-    </header>
-    <manin>
-      <slot />
-    </manin>
+    <a href={`/${linkId}`}>{linkText}</a>
+    <p>{text}</p>
   </body>
 </html>
