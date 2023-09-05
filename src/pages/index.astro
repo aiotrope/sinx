@@ -2,7 +2,7 @@
 export interface Props {
     pageTitle?: string
 }
-import Hello from "../components/Hello.astro";
+
 
 const { pageTitle = 'Home' } = Astro.props as Props
 ---
@@ -11,6 +11,12 @@ const { pageTitle = 'Home' } = Astro.props as Props
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Hello title="Astro" />
+   <h1>Rome!</h1>
+   <nav>
+    <ul>
+        <li><a href="/one">Click here!</a></li>
+        <li><a href="/two">Click here!</a></li>
+    </ul>
+   </nav>
   </body>
 </html>
